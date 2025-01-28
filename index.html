@@ -5,28 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Mastermind - Dark Theme</title>
     <style>
-        /* Define the blink animation */
-        /* Define the vibration animation */
         @keyframes vibrate {
-            0% {
-                transform: translateX(0);
-            }
-
-            25% {
-                transform: translateX(-5px);
-            }
-
-            50% {
-                transform: translateX(5px);
-            }
-
-            75% {
-                transform: translateX(-5px);
-            }
-
-            100% {
-                transform: translateX(5px);
-            }
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(5px); }
         }
 
         body {
@@ -66,8 +50,6 @@
             margin-bottom: 30px;
         }
 
-
-
         .join-button {
             background: linear-gradient(to bottom, #238636, #2ea043);
             color: white;
@@ -80,19 +62,18 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s, box-shadow 0.3s;
-            animation: vibrate 0.9s infinite; /* Apply vibration effect */
+            animation: vibrate 0.9s infinite;
         }
 
-            .join-button:hover {
-                transform: scale(1.1);
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
-            }
+        .join-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+        }
 
-            .join-button:active {
-                transform: scale(0.95);
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            }
-
+        .join-button:active {
+            transform: scale(0.95);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
 
         .icons {
             display: flex;
@@ -114,11 +95,11 @@
             overflow: hidden;
         }
 
-            .icon img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+        .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         .background-decor {
             position: absolute;
@@ -157,40 +138,48 @@
         }
 
         @keyframes arrow-up {
-            0%, 100% {
-                transform: translateY(0);
-            }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
 
-            50% {
-                transform: translateY(-10px);
-            }
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 70px; /* Moved up by 50px */
+            right: 30px; /* Added margin from the right */
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .whatsapp-icon img {
+            width: 35px;
+            height: 35px;
         }
 
         @media (max-width: 768px) {
-            .heading {
-                font-size: 2.5rem;
-            }
-
-            .subheading {
-                font-size: 1.5rem;
-            }
-
-            .join-button {
-                padding: 10px 30px;
-                font-size: 1.2rem;
-            }
-
-            .icon {
+            .heading { font-size: 2.5rem; }
+            .subheading { font-size: 1.5rem; }
+            .join-button { padding: 10px 30px; font-size: 1.2rem; }
+            .icon { width: 50px; height: 50px; }
+            .profit-indicator { font-size: 1rem; }
+            .arrow { font-size: 2.5rem; }
+            .whatsapp-icon {
+                bottom: 50px; /* Adjusted for smaller screens */
+                right: 20px; /* Reduced right margin for smaller screens */
                 width: 50px;
                 height: 50px;
             }
 
-            .profit-indicator {
-                font-size: 1rem;
-            }
-
-            .arrow {
-                font-size: 2.5rem;
+            .whatsapp-icon img {
+                width: 30px;
+                height: 30px;
             }
         }
     </style>
@@ -210,5 +199,8 @@
         <div class="profit-indicator">Profit: +2500%</div>
         <div class="arrow">⬆</div>
     </div>
+    <a href="https://wa.me/message/3BDDK5OJNQJ4G1" class="whatsapp-icon" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
 </body>
 </html>
